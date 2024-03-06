@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+
+<html data-lt-installed="true" lang="de">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Codewerkstatt</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/w3.css">
+    <link rel="stylesheet" href="./css/w3-theme-black.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/custom.css">
+    <script src="modal.js" defer></script>
+
+</head>
+
+<body id="myPage">
+<div id="blurred"></div>
+
+<!-- Sidebar on click -->
+<nav class="w3-sidebar w3-bar-block w3-white w3-card w3-animate-left w3-xxlarge" style="display:none;z-index:2"
+     id="mySidebar">
+    <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-display-topright w3-text-teal">Close
+        <i class="fa fa-remove"></i>
+    </a>
+    <a href="./index.html#" class="w3-bar-item w3-button">Link 1</a>
+    <a href="./index.html#" class="w3-bar-item w3-button">Link 2</a>
+    <a href="./index.html#" class="w3-bar-item w3-button">Link 3</a>
+    <a href="./index.html#" class="w3-bar-item w3-button">Link 4</a>
+    <a href="./index.html#" class="w3-bar-item w3-button">Link 5</a>
+</nav>
+
+<!-- Navbar -->
+<div class="w3-top">
+    <div class="w3-bar w3-theme-d2 w3-left-align">
+        <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-hover-white w3-theme-d2"
+           href="javascript:void(0);" onclick="openNav()"><i class="fa fa-bars"></i></a>
+        <a href="./index.html#" class="w3-bar-item w3-button w3-teal"><i class="fa fa-home w3-margin-right"></i>Logo</a>
+        <a href="./index.html#team" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Team</a>
+        <a href="./index.html#work" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Work</a>
+        <a href="./index.html#pricing" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Price</a>
+        <a href="./index.html#contact" class="w3-bar-item w3-button w3-hide-small w3-hover-white">Contact</a>
+        <div class="w3-dropdown-hover w3-hide-small">
+            <button class="w3-button" title="Notifications">Dropdown <i class="fa fa-caret-down"></i></button>
+            <div class="w3-dropdown-content w3-card-4 w3-bar-block">
+                <a href="./index.html#" class="w3-bar-item w3-button">Link</a>
+                <a href="./index.html#" class="w3-bar-item w3-button">Link</a>
+                <a href="./index.html#" class="w3-bar-item w3-button">Link</a>
+            </div>
+        </div>
+        <a href="./index.html#" class="w3-bar-item w3-button w3-hide-small w3-right w3-hover-teal" title="Search"><i
+                class="fa fa-search"></i></a>
+    </div>
+
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-theme-d2 w3-hide w3-hide-large w3-hide-medium">
+        <a href="./index.html#team" class="w3-bar-item w3-button">Team</a>
+        <a href="./index.html#work" class="w3-bar-item w3-button">Work</a>
+        <a href="./index.html#pricing" class="w3-bar-item w3-button">Price</a>
+        <a href="./index.html#contact" class="w3-bar-item w3-button">Contact</a>
+        <a href="./index.html#" class="w3-bar-item w3-button">Search</a>
+    </div>
+</div>
+
+<!-- Image Header -->
+<div class="w3-display-container w3-animate-opacity" id="banner_container">
+    <!--<img src="./img/banner.jpg" alt="boat" id="banner">-->
+    <div class="w3-container w3-display-bottomleft w3-margin-bottom">
+        <button class="w3-button w3-xlarge w3-theme w3-hover-teal" title="Go To W3.CSS">Codewerkstatt</button>
+    </div>
+</div>
+
+<!-- Modal -->
+<div id="id01" class="w3-modal">
+    <div class="w3-modal-content w3-card-4 w3-animate-top">
+        <header class="w3-container w3-teal w3-display-container">
+            <span onclick="closeModal()"
+                  class="w3-button w3-teal w3-display-topright"><i class="fa fa-remove"></i></span>
+            <h4>Cookies</h4>
+            <h5>Bitte stimme unseren Cookies zu.<i class="fa fa-smile-o"></i></h5>
+        </header>
+        <div class="w3-container">
+            <p></p>
+            <p><strong>Schaue dir doch die Bilder weiter unten für mindestens 5 Sekunden an</strong><br>Um herauszufinden, was
+                Cookies sind, schaue doch hier nach<a class="w3-text-teal"
+                                                      href="https://de.wikipedia.org/wiki/HTTP-Cookie"
+                                                      target="_blank"> Cookies Wikipedia</a>
+            </p>
+        </div>
+        <footer class="w3-container w3-teal">
+            <p>Freundliche Grüsse Codewerkstatt</p>
+            <button onclick="closeModal()">Annehmen</button>
+        </footer>
+    </div>
+</div>
+
+<!-- Team Container -->
+<div class="w3-container w3-padding-64 w3-center" id="team">
+    <h2>Unser Team</h2>
+    <p>Triff unser Team</p>
+
+    <div class="w3-row"><br>
+
+        <div class="w3-quarter">
+            <img src="./img/account.svg" alt="Account Icon" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Konrad von Stetten</h3>
+            <p>Web Designer</p>
+        </div>
+
+        <div class="w3-quarter">
+            <img src="./img/account.svg" alt="Account Icon" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Maya Sonnenschein</h3>
+            <p>Support</p>
+        </div>
+
+        <div class="w3-quarter">
+            <img src="./img/account.svg" alt="Acount Icon" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Fabian Kraftprotz</h3>
+            <p>Boss man</p>
+        </div>
+
+        <div class="w3-quarter">
+            <img src="./img/account.svg" alt="Account Icon" style="width:45%" class="w3-circle w3-hover-opacity">
+            <h3>Emma Blumenwiese</h3>
+            <p>Fixer</p>
+        </div>
+
+    </div>
+</div>
+
+<!-- Work Row -->
+<div class="w3-row-padding w3-padding-64 w3-theme-l1" id="work">
+
+    <div class="w3-quarter">
+        <h2>Unsere Arbeit</h2>
+        <p>Codewerkstatt - Ihr Partner für Webhosting und Webentwicklung
+            Professionelle Websites & zuverlässiges Hosting - alles aus einer Hand
+
+            Mit Codewerkstatt zum Erfolg im Internet
+
+            Webentwicklung:
+
+            Erstellung von individuellen Websites und Webanwendungen
+            Responsive Design für optimale Darstellung auf allen Endgeräten
+            Suchmaschinenoptimierung (SEO) für beste Sichtbarkeit im Internet
+            Content-Management-Systeme (CMS) für die einfache Pflege Ihrer Website</p>
+    </div>
+
+    <div class="w3-quarter">
+        <div class="w3-card w3-white">
+            <img src="./img/customerOne.jpg" alt="Customer One" style="width:100%">
+            <div class="w3-container">
+                <h3>TechCity</h3>
+                <h4>IT-Dienstleitung</h4>
+                <p>TechCity ist ein führender Anbieter von IT-Dienstleistungen mit Sitz in Bern, Schweiz. Das
+                    Unternehmen wurde im Jahr 2015 gegründet und beschäftigt 21 Mitarbeiter.
+                    TechCity bietet ein umfassendes Leistungsspektrum aus den Bereichen Webentwicklung, Hosting, Cloud
+                    Computing und IT-Consulting. Das Unternehmen ist bekannt für seine hohe Qualität, seinen
+                    zuverlässigen Service und seine innovativen Lösungen.
+                    TechCity hat sich für Codewerkstatt entschieden, weil:
+
+                </p>
+                <ul>
+                    <li>Codewerkstatt ein erfahrener und zuverlässiger Partner in der IT-Branche ist.</li>
+                    <li>Codewerkstatt ein umfassendes Leistungsspektrum aus den Bereichen Webentwicklung und Hosting
+                        anbietet.
+                    </li>
+                    <li>Codewerkstatt individuelle Lösungen und maßgeschneiderte Angebote erstellt.</li>
+                    <li>Codewerkstatt einen hervorragenden Support bietet.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-quarter">
+        <div class="w3-card w3-white">
+            <img src="img/b2.jpg" alt="Customer Two" id="changeImg" style="width: 100%">
+            <script src="changeImg.js"></script>
+            <div class="w3-container">
+                <h3>Trimano</h3>
+                <h4>Freizeit</h4>
+                <p>Trimano Boulderhalle bietet neben dem Klettern auch Kurse für Anfänger und Fortgeschrittene,
+                    Kinderbetreuung und einen gemütlichen Aufenthaltsbereich mit Bistro. Die Halle ist ein beliebter
+                    Treffpunkt für Kletterbegeisterte aus der Region und darüber hinaus.
+
+                    Trimano Boulderhalle hat sich für Codewerkstatt entschieden, weil:
+                </p>
+                <ul>
+                    <li>Codewerkstatt ein erfahrener und zuverlässiger Partner in der IT-Branche ist.</li>
+                    <li>Codewerkstatt eine responsive Website erstellt hat, die auf allen Endgeräten optimal dargestellt
+                        wird.
+                    </li>
+                    <li>Codewerkstatt die Website suchmaschinenoptimiert hat, so dass die Trimano Boulderhalle im
+                        Internet leicht gefunden werden kann.
+                    </li>
+                    <li>Codewerkstatt einen hervorragenden Support bietet.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-quarter">
+        <div class="w3-card w3-white">
+            <img src="./img/Coiffeur.jpg" alt="Coiffeur" style="width:100%">
+            <div class="w3-container">
+                <h3>Salon Divine</h3>
+                <h4>Coiffeur</h4>
+                <p>Willkommen im Pure Salon, Ihrem exklusiven Coiffeur in Bern. Bei uns dreht sich alles darum, Ihre
+                    individuelle Schönheit zu betonen und Ihnen ein unvergessliches Erlebnis zu bieten. Unser erfahrenes
+                    Team steht Ihnen mit professioneller Beratung und erstklassigem Service zur Seite.
+
+                    Kundenbewertung:
+
+                    "Die Zusammenarbeit mit Codewerkstatt für unsere Webseite war einfach fantastisch! Sie haben eine
+                    Webseite für uns erstellt, die nicht nur ansprechend ist, sondern auch unsere Marke perfekt
+                    widerspiegelt. Die Beratung war unkompliziert und effizient, und sie haben sich wirklich die Zeit
+                    genommen, unsere Bedürfnisse zu verstehen. Wir sind mit dem Ergebnis absolut zufrieden und würden
+                    Codewerkstatt jedem weiterempfehlen, der eine professionelle und kreative Lösung sucht."</p>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!-- Container -->
+<div class="w3-container" style="position:relative">
+    <a onclick="w3_open()" class="w3-button w3-xlarge w3-circle w3-teal" style="position:absolute;top:-28px;right:24px">+</a>
+</div>
+
+<!-- Pricing Row -->
+<div class="w3-row-padding w3-center w3-padding-64" id="pricing">
+    <h2>Preise</h2>
+    <p>Wähle ein Produkt, das dir entspricht</p><br>
+    <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-hover-shadow">
+            <li class="w3-theme">
+                <p class="w3-xlarge">Basic</p>
+            </li>
+            <li class="w3-padding-16"><b>10GB</b> Speicher</li>
+            <li class="w3-padding-16"><b>10</b> Emails</li>
+            <li class="w3-padding-16"><b>10</b> Domains</li>
+            <li class="w3-padding-16"><b>Unbegrenzt</b> Support</li>
+            <li class="w3-padding-16">
+                <h2 class="w3-wide"><i class="fa fa-usd"></i> 10</h2>
+                <span class="w3-opacity">Pro Monat</span>
+            </li>
+            <li class="w3-theme-l5 w3-padding-24">
+                <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-hover-shadow">
+            <li class="w3-theme-l2">
+                <p class="w3-xlarge">Pro</p>
+            </li>
+            <li class="w3-padding-16"><b>25GB</b> Speicher</li>
+            <li class="w3-padding-16"><b>25</b> Emails</li>
+            <li class="w3-padding-16"><b>25</b> Domains</li>
+            <li class="w3-padding-16"><b>Unbegrenzt</b> Support</li>
+            <li class="w3-padding-16">
+                <h2 class="w3-wide"><i class="fa fa-usd"></i> 25</h2>
+                <span class="w3-opacity">pro Monat</span>
+            </li>
+            <li class="w3-theme-l5 w3-padding-24">
+                <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+            </li>
+        </ul>
+    </div>
+
+    <div class="w3-third w3-margin-bottom">
+        <ul class="w3-ul w3-border w3-hover-shadow">
+            <li class="w3-theme">
+                <p class="w3-xlarge">Premium</p>
+            </li>
+            <li class="w3-padding-16"><b>50GB</b> Speicher</li>
+            <li class="w3-padding-16"><b>50</b> Emails</li>
+            <li class="w3-padding-16"><b>50</b> Domains</li>
+            <li class="w3-padding-16"><b>Unbegrenzt</b> Support</li>
+            <li class="w3-padding-16">
+                <h2 class="w3-wide"><i class="fa fa-usd"></i> 50</h2>
+                <span class="w3-opacity">pro Monat</span>
+            </li>
+            <li class="w3-theme-l5 w3-padding-24">
+                <button class="w3-button w3-teal w3-padding-large"><i class="fa fa-check"></i> Sign Up</button>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!-- Contact Container -->
+<div class="w3-container w3-padding-64 w3-theme-l5" id="contact">
+    <div class="w3-row">
+        <div class="w3-col m5">
+            <div class="w3-padding-16"><span class="w3-xlarge w3-border-teal w3-bottombar">Kontaktiere Uns</span></div>
+            <h3>Addresse</h3>
+            <p>Komm jederzeit vorbei und lerne etwas!</p>
+            <p><i class="fa fa-map-marker w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;Bern, Schweiz</p>
+            <p><i class="fa fa-phone w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;+4179123 45 67</p>
+            <p><i class="fa fa-envelope-o w3-text-teal w3-xlarge"></i>&nbsp;&nbsp;test@test.com</p>
+        </div>
+        <div class="w3-col m7">
+            <form class="w3-container w3-card-4 w3-padding-16 w3-white"
+                  action="https://www.w3schools.com/action_page.php" target="_blank">
+                <div class="w3-section">
+                    <label>Name</label>
+                    <input class="w3-input" type="text" name="Name" required="">
+                </div>
+                <div class="w3-section">
+                    <label>Email</label>
+                    <input class="w3-input" type="text" name="Email" required="">
+                </div>
+                <div class="w3-section">
+                    <label>Message</label>
+                    <input class="w3-input" type="text" name="Nachricht" required="">
+                </div>
+                <input class="w3-check" type="checkbox" checked="" name="Like">
+                <label>I Like it!</label>
+                <button type="submit" class="w3-button w3-right w3-theme">Senden</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Image of location/map -->
+<div class="map-wrapper">
+    <iframe id="gmap_canvas"
+            src="https://maps.google.com/maps?width=520&amp;height=400&amp;hl=en&amp;q=Lorrainestrasse%201%20Bern+(Hier%20sind%20wir)&amp;t=&amp;z=12&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+    <a href='https://doktorarbeitschreiben.com/'>doktorarbeitschreiben.com</a>
+    <script
+            src='https://embedmaps.com/google-maps-authorization/script.js?id=900dfeb2137e69ed5145daa897ca3120a21c8420'></script>
+</div>
+
+
+<!-- Footer -->
+<footer class="w3-container w3-padding-32 w3-theme-l1 w3-center" id="footer">
+    <h4>Follow Us</h4>
+    <a class="w3-button w3-large facebook" href="javascript:void(0)" title="Facebook"><i class="fa fa-facebook"></i></a>
+    <a class="w3-button w3-large twitter" href="javascript:void(0)" title="Twitter"><i class="fa fa-twitter"></i></a>
+    <a class="w3-button w3-large youtube" href="javascript:void(0)" title="youtube"><i class="fa fa-youtube"></i></a>
+    <a class="w3-button w3-large instagram" href="javascript:void(0)" title="Google +"><i
+            class="fa fa-instagram"></i></a>
+    <a class="w3-button w3-large linkedin w3-hide-small" href="javascript:void(0)" title="Linkedin"><i
+            class="fa fa-linkedin"></i></a>
+
+
+</footer>
+
+<script>
+    // Script for side navigation
+    function w3_open() {
+        var x = document.getElementById("mySidebar");
+        x.style.width = "300px";
+        x.style.paddingTop = "10%";
+        x.style.display = "block";
+    }
+
+    // Close side navigation
+    function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+    }
+
+    // Used to toggle the menu on smaller screens when clicking on the menu button
+    function openNav() {
+        var x = document.getElementById("navDemo");
+        if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+        } else {
+            x.className = x.className.replace(" w3-show", "");
+        }
+    }
+</script>
+
+
+</body>
+
+</html>
